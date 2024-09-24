@@ -18,10 +18,10 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
   
-  - job_name: 'demo_application'
+  - job_name: 'integrador-prometheus'
     scrape_interval: 5s
     static_configs:
-      - targets: ['demo.do.prometheus.io:9090']
+      - targets: ['https://integradorbackend-development.up.railway.app:8080']
 
   # - job_name: 'postgres'
   #   scrape_interval: 5s
