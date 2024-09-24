@@ -15,4 +15,4 @@ scrape_configs:
   - job_name: 'integrador_backend'
     scrape_interval: 5s
     static_configs:
-      - targets: ['integradorbackend-development.up.railway.app:80']
+      - targets: ['integradorbackend-development.up.railway.app']
