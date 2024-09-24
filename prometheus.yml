@@ -1,18 +1,5 @@
-global:
-  scrape_interval: 15s # Intervalo de scrape padrão de 15 segundos.
-
-  external_labels:
-    monitor: 'railway-prom'
-
 scrape_configs:
-  # Configuração para o Prometheus.
-  - job_name: 'prometheus'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['localhost:9090']
-
-  # Configuração para sua API.
   - job_name: 'integrador_backend'
     scrape_interval: 5s
     static_configs:
-      - targets: ['integradorbackend-development.up.railway.app:80']
+      - targets: ['integradorbackend-development.up.railway.app:80/metrics']
